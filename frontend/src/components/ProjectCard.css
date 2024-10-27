@@ -1,0 +1,15 @@
+.project-card{
+    height: 8rem;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 10px rgba(207, 207, 207, 0.4);
+    padding: 1rem; /* Adjust padding if needed */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project-card>h4{
+    font-size: 2rem;
+}
