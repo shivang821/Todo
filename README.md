@@ -3,7 +3,7 @@ git clone https://github.com/shivang821/Todo.git
 cd Todo
 
 # Frontend Setup
-# #Prerequisites:
+## Prerequisites:
 
 Node.js
 
