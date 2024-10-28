@@ -1,6 +1,7 @@
 package com.todo.backend.Controller;
 
 import com.todo.backend.Entities.Project;
+import com.todo.backend.Entities.Todo;
 import com.todo.backend.Service.ProjectService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,6 +45,12 @@ public class ProjectController {
     public ResponseEntity<String> deleteProject(@PathVariable Long projectId) {
         projectService.deleteProject(projectId);
         return ResponseEntity.ok("Project with id " + projectId + " deleted successfully");
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<String> updateTodo(@PathVariable Long id, @RequestBody Project projectDetails) throws Exception {
+        System.out.println("put called");
+        Project updatedTodo = projectService.updateProject(id, projectDetails);
+        return ResponseEntity.ok("project updated successfully");
     }
 
 }

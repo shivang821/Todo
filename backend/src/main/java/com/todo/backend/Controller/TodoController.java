@@ -32,8 +32,8 @@ public class TodoController {
         return ResponseEntity.ok("Todo with id "+todoId+" deleted successfully");
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Todo> updateTodo(@PathVariable Long id, @RequestBody Todo todoDetails) throws Exception {
+    public ResponseEntity<String> updateTodo(@PathVariable Long id, @RequestBody Todo todoDetails) throws Exception {
         Todo updatedTodo = todoService.updateTodo(id, todoDetails);
-        return ResponseEntity.ok(updatedTodo);
+        return ResponseEntity.ok("todo updated successfully");
     }
 }

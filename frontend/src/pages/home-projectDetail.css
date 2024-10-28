@@ -1,6 +1,6 @@
 /* HomePage.css */
 
-.home-container {
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -23,10 +23,28 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
     padding: 2rem;
     font-weight: bold;
     font-size: 1.2rem;
+  }
+  .addTodoBtn{
+    border-radius: 5px !important; 
+  }
+  .exportGist{
+    position: absolute;
+    right: 10rem;
+    bottom: .5rem;
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #252525;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    font-weight: bold;
   }
   .upper-section2{
     height: 6rem;
@@ -38,6 +56,18 @@
     border-bottom: 2px solid gray;
     color: #252525;
     position: relative;
+  }
+  .upper-section2>h1{
+    outline: none;
+    border: none;
+    
+  }
+  .upper-section2>h1>span{
+    font-size: 1.1rem;
+  }
+  .upper-section2>span>img{
+    margin-left: .5rem;
+    cursor: pointer;
   }
   .addProject{
     position: absolute;
@@ -82,7 +112,7 @@
     align-items: center;
 }
 
-.project-list {
+.project-list,.todo-list {
     padding: 2rem;
     width: 80%;
     height: 35rem;
@@ -93,4 +123,166 @@
     align-items: start !important;
     
   }
-  
+  .todo-card{
+    height: 8rem;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 10px rgba(207, 207, 207, 0.4);
+    padding: 1rem; /* Adjust padding if needed */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .todo-card1{
+    height: 50%;
+    width: 100%;
+  }
+  .todo-card2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .desc{
+    display: -webkit-box;            
+    -webkit-box-orient: vertical;    
+    overflow: hidden;                
+    text-overflow: ellipsis;        
+    -webkit-line-clamp: 2;           
+    max-width: 200px; 
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .showTodo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .showTodoCenter{
+    height: 50%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: .5rem;
+  }
+  .showTodoCenter1{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+    font-size: .7rem;
+  }
+  .showTodoCenter1>h1{
+    cursor: pointer;
+  }
+  .showTodoCenter2{
+    height: 60%;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: .5rem;
+    border: 1px solid gray;
+    overflow-y: auto;
+  }
+  .showTodoCenter3{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+  }
+  .showTodoCenter4{
+    height: 20%;
+    width: 100%;
+    pad: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+  }
+  .showTodoCenter4>button{
+    padding: .5rem 1rem;
+    color: white;
+    background-color:#252525;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .addTodo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .addTodoCenter{
+    height: 50%;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    padding: .5rem;
+  }
+  .addTodoCenter1{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+    font-size: .7rem;
+  }
+  .addTodoCenter1>h1{
+    cursor: pointer;
+  }
+  .addTodoCenter2{
+    height: 70%;
+
+    background-color: whitesmoke;
+  }
+  .addTodoCenter2>textarea{
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 100%;
+    width: 100%;
+    padding: .5rem;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .addTodoCenter3{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: .5rem;
+  }
+  .addTodoCenter3>button{
+    padding: .5rem 1rem;
+    color: white;
+    background-color:#252525;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }

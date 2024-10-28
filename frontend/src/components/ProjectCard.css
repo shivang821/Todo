@@ -10,6 +10,27 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.project-card>h4{
-    font-size: 2rem;
+
+.project-card1{
+    height: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+}
+.project-card2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+}
+.project-card2>button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    padding: .5rem;
+    background-color: #151515;
+    border-radius: 5px;
+    font-weight: bold;
 }

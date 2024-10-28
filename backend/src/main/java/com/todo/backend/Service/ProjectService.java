@@ -18,6 +18,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -122,5 +123,19 @@ public class ProjectService {
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception as needed
         }
+    }
+
+    public Project updateProject(Long id, Project projectDetails) throws Exception {
+        // Find the existing Todo
+        Project existingProject = projectRepository.findById(id)
+                .orElseThrow(() -> new Exception("Todo not found with id: " + id));
+        if(!existingProject.getTitle().equals(projectDetails.getTitle())){
+            validateProjectNameUnique(projectDetails.getTitle());
+        }
+        // Update the fields
+        existingProject.setTitle(projectDetails.getTitle());
+
+        // Save and return the updated Todo
+        return projectRepository.save(existingProject);
     }
 }
