@@ -9,7 +9,7 @@ Node.js
 
 npm or yarn
 
-# #Installation
+## Installation
 Switch to frontend:
 
 cd frontend
@@ -32,8 +32,10 @@ yarn dev
 
 The frontend will run on http://localhost:3000.
 
+# Make sure your system already has the todo_management database created.
+
 # Backend Setup
-# #Prerequisites:
+## Prerequisites:
 
 Java 22 (copy the your system java versioin in pom.xml. This project has java 22)
 
@@ -43,7 +45,7 @@ Maven
 
 Installation
 
-# #update application.properties file
+## update application.properties file
 
 spring.application.name=backend
 
@@ -70,3 +72,5 @@ mvn clean install
 Start backend server
 
 mvn spring-boot:run
+
+
