@@ -32,7 +32,7 @@ yarn dev
 
 The frontend will run on http://localhost:3000.
 
-# Make sure your system already has the todo_management database created.
+## Make sure your system already has the todo_management database created before running backend
 
 # Backend Setup
 ## Prerequisites:
